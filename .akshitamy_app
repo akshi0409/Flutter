@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 70.0,
+                backgroundImage: AssetImage('images/Profilepic.jpeg'),
+              ),
+              Text(
+                'Akshita Sah',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  fontFamily: 'BebasNeue',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              Text(
+          'Student',
+          style: TextStyle(
+            fontSize: 20.0,
+
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+              ),
+              Card(
+
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
+                child: ListTile(
+                    leading:   Icon(
+                          Icons.email,
+                      color: Colors.blueGrey,),
+                      title: Text('akshita.asah@gmail.com',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),)
+
+
+                  ),
+                ),
+              Card(
+
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
+                child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.blueGrey,),
+
+                      title: Text('1111111111',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+                      ),
+
+
+                  ),
+                ),
+
+            ],
+          ),
+        )
+      ),
+    );
+  }
+}
